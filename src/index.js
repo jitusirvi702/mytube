@@ -26,3 +26,10 @@ const app = express()
     }
 })
 ()
+.then(() => {
+    app.listen(process.env.PORT || 3000)
+    console.log(`server is running at port : ${process.env.PORT}`)
+})
+.catch((err) =>{
+    console.log("Connection is failed", err);
+}) 
